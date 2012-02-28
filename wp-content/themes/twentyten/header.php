@@ -44,8 +44,8 @@
    		<div id="header">
    			<div class="top_bar">
    				<div class="container">
-   					<a class="advfancybox iframe" href="http://affiliate.oastracker.com/index.php?pgid=24"><div id="login"></div></a>
- 				</div>
+   					<a href="http://www.google.com"><div id="login"></div></a>
+				</div>
 			</div><!--.top_bar-->
 			<div class="container">
 					<strong class="logo">

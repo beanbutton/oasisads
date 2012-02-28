@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<link rel="stylesheet" href="../../../../wp-includes/js/tinymce/themes/advanced/skins/wp_theme/dialog.css?ver=3241-1141" />
+	<script type="text/javascript">
+	var xTypex = '';
+	var xValuex = '';
+		function xAttribute(xVal){
+			if(xVal==1){
+				xTypex = "1";
+				document.getElementById('xLink').disabled = true;
+				document.getElementById('xLinkB').disabled = true;
+				document.getElementById('xAjax').disabled = false;
+				document.getElementById('xLink').value = '';
+				document.getElementById('xLink').style.background = "#C5C5C5";
+				document.getElementById('xLinkB').style.background = "#C5C5C5";
+				document.getElementById('xAjax').style.background = "#FFFFFF";				
+			}else if(xVal==2){
+				xTypex = "2";
+				document.getElementById('xLink').disabled = false;
+				document.getElementById('xAjax').disabled = true;
+				document.getElementById('xLinkB').disabled = true;
+				document.getElementById('xAjax').value = '';
+				document.getElementById('xAjax').style.background = "#C5C5C5";
+				document.getElementById('xLinkB').style.background = "#C5C5C5";
+				document.getElementById('xLink').style.background = "#FFFFFF";
+			}else if(xVal==3){
+				xTypex = "3";
+				document.getElementById('xLinkB').disabled = false;
+				document.getElementById('xAjax').disabled = true;
+				document.getElementById('xLink').disabled = true;
+				document.getElementById('xAjax').value = '';
+				document.getElementById('xAjax').style.background = "#C5C5C5";
+				document.getElementById('xLink').style.background = "#C5C5C5";
+				document.getElementById('xLinkB').style.background = "#FFFFFF";				
+			}
+		}
+		function xProcess(){
+			if(xTypex=="1"){
+				xValuex = document.getElementById('xAjax').value;
+			}else if(xTypex=="2"){
+				xValuex = document.getElementById('xLink').value;
+			}else if(xTypex=="3"){
+				xValuex = document.getElementById('xLinkB').value;
+			}
+			if(xTypex!=''){
+				parent.xTestx(xTypex,xValuex);
+			}else{
+				alert('Please select a radio button before inserting!');
+			}
+		}
+	</script>
+</head>
+<body id="link">
+	<div class="tabs">
+	<ul>
+		<li id="general_tab" class="current">
+			<span>
+				<a onmousedown="return false;" href="javascript:mcTabs.displayTab('general_tab','picture_panel');generatePreview();">Insert Picture</a>
+			</span>
+		</li>
+	</ul>
+	</div>
+	<div class="panel_wrapper">
+		<div id="picture_panel" class="panel current">
+			<input type="radio" name="xType" id="xTypeA" onclick="xAttribute('2');" value="" />
+			Link to picture:<br/>
+			<input type="text" name="xTest" id="xLink" value="" style="width:200px;" /><br/>
+			or<br/>
+			<input type="radio" name="xType" id="xTypeB" onclick="xAttribute('1');" value="" />
+			Custom Field Name:<br/>
+			<input type="text" id="xAjax" name="xAjax" value="" style="width:200px;" /><br/>
+			or<br/>
+			<input type="radio" name="xType" id="xTypeC" onclick="xAttribute('3');" value="" />
+			Link to webpage(iframe):<br/>
+			<input type="text" name="xTestB" id="xLinkB" value="" style="width:200px;" />
+		</div>
+	</div>
+	<div class="mceActionPanel">
+		<div style="float: right;">
+			<input class="mceClose" type="button" value="Insert" onclick="xProcess();" id="insert" />
+		</div>
+	</div>
+</body>
+</html>
