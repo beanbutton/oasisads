@@ -38,6 +38,22 @@
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
+  <!--fancybox-->
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/js/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+  <!-- Javascript -->
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+  <script type="text/javascript">
+
+  		jQuery(document).ready(function() {
+			jQuery(".show").fancybox({
+				'titleShow'		: 'false',
+				'transitionIn'		: 'fade',
+				'transitionOut'		: 'fade'
+			});
+		});
+  </script>
+
   <?php wp_footer(); ?>
 </body>
 </html>

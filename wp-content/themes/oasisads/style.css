@@ -53,8 +53,8 @@ body { margin: 0; font-size: 1em; line-height: 1.4;}
  * Also: hot pink! (or customize the background color to match your design)
  */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #d9dadb; color: #fff; text-shadow: none; }
+::-moz-selection { background: #1A6EB7; color: #fff; text-shadow: none; }
+::selection { background: #1A6EB7; color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
@@ -281,7 +281,7 @@ a:hover #login  {
 .logo {
 	position: absolute;
 	top: 0;
-	left: 50px;
+	left: 30px;
 	
 }
 
@@ -298,6 +298,7 @@ a:hover #login  {
 	float: right;
 	list-style:none;
 	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #nav li.active, #nav li:hover {
@@ -309,6 +310,7 @@ a:hover #login  {
 	float: left;
 	padding: 0 2px 0 2px;
 	margin: 0 0 0 1px;
+	
 }
 
 #nav li a {
@@ -317,6 +319,7 @@ a:hover #login  {
 	padding: 6px 10px 0 10px;
 	text-decoration: none;
 	color:#555151;
+
 }
 
 #nav li a:hover {
@@ -356,8 +359,7 @@ a:hover #login  {
 .textbox{
 	padding-left:35px;
 	padding-right:35px;
-	padding-bottom:30px;
-	padding-top:20px;
+	padding-top:0px;
 }
 
 h2{
@@ -431,6 +433,11 @@ a.button:hover span {
 }
 
 /* Contact Form */
+.contactbg {
+    background-color: #F5F5F5;
+    border-radius: 6px 6px 6px 6px;
+    padding: 25px 29px;
+}
 
 #contactForm{
     list-style:none;
@@ -456,13 +463,12 @@ a.button:hover span {
     border: 1px solid #999999;
     width: 345px;
     height: 35px;
-    background: #deecf8;
+    background: #1A6EB7;
     font: 15px verdana, sans-serif;
-    color: #443;
+    color: #fff;
     padding: 3px;
     margin-bottom: 4px;
     outline: none;
-
 	-webkit-box-shadow: inset 0px 0px 3px #7a7a7a;
 	-moz-box-shadow: inset 0px 0px 3px #7a7a7a;
 	box-shadow: inset 0px 0px 3px #7a7a7a;
@@ -471,7 +477,8 @@ a.button:hover span {
 
 #contactForm li textarea{
     width: 345px;
-   
+    color: #443;
+    
 }
 
 .map-wrap{
@@ -530,6 +537,7 @@ a.button:hover span {
 
 .add-nav li a:hover{
 	color:#555151;
+	font-weigth:bold;
 }
 
 
@@ -541,6 +549,78 @@ a.button:hover span {
 }
  
 
+/*
+ * fancybox
+ */
+
+div#register-form {
+	width: 400px;
+	overflow: hidden;
+	height: 230px;
+	position: relative;
+	font-family: Helvetica Neue, Helvetica, Arial !important;
+}
+
+div#register-form input[type="text"], div#register-form input[type="password"]  {
+	display: block;
+	border: 1px solid #ccc;
+	margin: 5px 20px;
+	padding: 9px 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	width: 200px;
+	font-family: Helvetica Neue, Helvetica, Arial !important;
+	margin-bottom:15px;
+}
+
+div#register-form input[type="text"]:hover {
+	border-color: #b1b1b1;
+}
+
+div#register-form input[type="text"]:focus {
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+}
+div#register-form input[type="submit"]#register {
+	background: url(img/submit-button.jpg) no-repeat;
+	border: 0;
+	clear: both;
+	cursor: pointer;
+	height: 22px;
+	overflow: hidden;
+	position: relative;
+	left: 262px;
+	text-indent: -9999px;
+	top: 15px;
+	width: 50px;
+}
+
+div#register-form label {
+	float: left;
+	width: 87px;
+	margin-left: 15px;
+	margin-top: 8px;
+}
+
+
+div#register-form span {
+	display: block;
+	margin-bottom: 22px;
+}
+
+div#register-form div.title {margin-left:15px}
+div#register-form div.title h1,
+div#register-form div.title span {text-shadow:1px 1px 0px #fff}
+div#register-form div.title h1 {
+	margin:7px 0;
+}
+
+#raidofield{
+	width:300px;
+}
+div#register-form input[type="radio"]{
+	margin-left: 18px;
+}
 
 
 

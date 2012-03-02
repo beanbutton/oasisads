@@ -1,0 +1,45 @@
+	<?php $args = array(
+		        'echo' => true,
+		        'redirect' => site_url("?pgid=24"),
+		        'form_id' => 'loginform',
+		        'label_username' => __( 'Username' ),
+		        'label_password' => __( 'Password' ),
+		        'label_remember' => __( 'Remember Me' ),
+		        'label_log_in' => __( 'Log In' ),
+		        'id_username' => 'user_login',
+		        'id_password' => 'user_pass',
+		        'id_remember' => 'rememberme',
+		        'id_submit' => 'wp-submit',
+		        'remember' => true,
+		        'value_username' => NULL,
+		        'value_remember' => false ); wp_login_form($args);
+		         
+		          if (is_user_logged_in()) {
+		          echo '<script type="text/javascript" language="javascript">document.location.href="http://affiliate.oastracker.com/index.php?pgid=24";</script>';             
+		          }
+		          ?>
+		          
+		          
+		          	<!--form-->
+      			<form method="POST" action="/login.php" style="margin: 0px; padding: 0px;">
+								<table class="snapshotContainer" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td class="snapshotRow">Username:</td><td class="snapshotDollars">
+										<input class="formField" type="text" name="username" />
+										</td>
+									</tr>
+									<tr>
+										<td class="snapshotRow">Password:</td><td class="snapshotDollars">
+										<input class="formField" type="password" name="password" />
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="snapshotDollars">
+										<input type="image" src="/images/btnLogin.gif" alt="Login" />
+										</td>
+									</tr>
+								</table>
+      			
+      			<!--end form-->	
+
+		          
